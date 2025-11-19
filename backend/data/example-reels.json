@@ -1,0 +1,76 @@
+[
+  {
+    "id": "reel-001",
+    "streamId": "stream-abc123",
+    "format": "instagram",
+    "duration": 55,
+    "highlights": [
+      "highlight-1",
+      "highlight-2",
+      "highlight-3",
+      "highlight-4"
+    ],
+    "createdAt": 1700000000000,
+    "status": "completed",
+    "metadata": {
+      "title": "Epic Gaming Moments - Nov 2024",
+      "description": "Best highlights from the livestream! 🎮✨",
+      "hashtags": [
+        "#livestream",
+        "#highlights",
+        "#gaming",
+        "#epic",
+        "#montage"
+      ]
+    }
+  },
+  {
+    "id": "reel-002",
+    "streamId": "stream-abc123",
+    "format": "tiktok",
+    "duration": 45,
+    "highlights": [
+      "highlight-5",
+      "highlight-6",
+      "highlight-7"
+    ],
+    "createdAt": 1700086400000,
+    "status": "completed",
+    "metadata": {
+      "title": "Clutch Plays & Victories",
+      "description": "Amazing moments you can't miss!",
+      "hashtags": [
+        "#gaming",
+        "#clutch",
+        "#viral",
+        "#foryou",
+        "#gamer"
+      ]
+    }
+  },
+  {
+    "id": "reel-003",
+    "streamId": "stream-xyz789",
+    "format": "youtube",
+    "duration": 180,
+    "highlights": [
+      "highlight-8",
+      "highlight-9",
+      "highlight-10",
+      "highlight-11",
+      "highlight-12"
+    ],
+    "createdAt": 1700172800000,
+    "status": "completed",
+    "metadata": {
+      "title": "Complete Stream Highlights - Best Of",
+      "description": "Full compilation of the best moments from today's stream. Thanks for watching!",
+      "hashtags": [
+        "#livestream",
+        "#highlights",
+        "#bestof",
+        "#compilation"
+      ]
+    }
+  }
+]
