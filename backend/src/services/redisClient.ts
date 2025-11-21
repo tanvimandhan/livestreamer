@@ -1,12 +1,14 @@
-import { createClient, RedisClient as RedisClientType } from 'redis';
+import { createClient, RedisClientType } from 'redis';
 
 export class RedisClient {
   private client: RedisClientType | null = null;
 
   async connect(): Promise<void> {
     this.client = createClient({
-      host: process.env.REDIS_HOST || 'localhost',
-      port: parseInt(process.env.REDIS_PORT || '6379'),
+      socket: {
+        host: process.env.REDIS_HOST || 'localhost',
+        port: parseInt(process.env.REDIS_PORT || '6379'),
+      },
     });
 
     this.client.on('error', (err) => console.error('Redis error:', err));
@@ -49,12 +51,12 @@ export class RedisClient {
     await this.client.hSet(key, field, value);
   }
 
-  async hget(key: string, field: string): Promise<string | null> {
+  async hget(key: string, field: string): Promise<string | null | undefined> {
     if (!this.client) throw new Error('Redis not connected');
     return await this.client.hGet(key, field);
   }
 
-  async hgetall(key: string): Promise<Record<string, string>> {
+  async hgetall(key: string): Promise<Record<string, string | undefined>> {
     if (!this.client) throw new Error('Redis not connected');
     return await this.client.hGetAll(key);
   }

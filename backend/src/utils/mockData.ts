@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const generateMockHighlights = (streamId: string, count: number = 8) => {
   const baseTime = Date.now() - 3600000;
-  const highlights = [];
+  const highlights: any[] = [];
 
   const reasons = [
     'High positive sentiment',
@@ -105,7 +105,7 @@ export const generateMockChatMessages = (count: number) => {
     'Epic!',
   ];
 
-  const chatMessages = [];
+  const chatMessages: any[] = [];
   for (let i = 0; i < count; i++) {
     chatMessages.push({
       user: users[Math.floor(Math.random() * users.length)],

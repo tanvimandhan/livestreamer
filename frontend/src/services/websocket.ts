@@ -9,7 +9,7 @@ class WebSocketService {
   private listeners: Map<string, Set<WebSocketCallback>> = new Map();
 
   constructor() {
-    this.url = process.env.REACT_APP_WS_URL || 'ws://localhost:3001';
+    this.url = import.meta.env.VITE_WS_URL || 'ws://localhost:3001';
   }
 
   connect(): Promise<void> {
